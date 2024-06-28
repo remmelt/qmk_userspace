@@ -15,6 +15,7 @@ endif
 preonic-build:
 	qmk lint -kb preonic/rev3_drop -km remmelt
 	qmk compile -kb preonic/rev3_drop -km remmelt
+	util/keymap-drawer.sh
 
 preonic-flash: preonic-build
 	qmk flash -kb preonic/rev3_drop -km remmelt
