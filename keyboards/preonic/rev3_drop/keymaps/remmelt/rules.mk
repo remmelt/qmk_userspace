@@ -1,1 +1,27 @@
-SRC += muse.c
+MCU = STM32F303
+
+BOOTMAGIC_ENABLE = no
+MOUSEKEY_ENABLE = no
+EXTRAKEY_ENABLE = yes # Audio control and System control
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
+NKRO_ENABLE = yes
+BACKLIGHT_ENABLE = no
+MIDI_ENABLE = no
+AUDIO_ENABLE = yes
+UNICODE_ENABLE = no
+BLUETOOTH_ENABLE = no
+RGBLIGHT_ENABLE = no
+WS2812_DRIVER = bitbang
+API_SYSEX_ENABLE = no
+SPACE_CADET_ENABLE = no
+MAGIC_ENABLE = no
+
+# Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
+SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
+
+# SERIAL_LINK_ENABLE = yes
+ENCODER_ENABLE = yes
+DIP_SWITCH_ENABLE = yes
+
+LAYOUTS = preonic_1x2uC
