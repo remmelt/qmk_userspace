@@ -12,5 +12,12 @@ ifeq ($(QMK_FIRMWARE_ROOT),)
     $(error Cannot determine qmk_firmware location. `qmk config -ro user.qmk_home` is not set)
 endif
 
+preonic-build:
+	qmk lint -kb preonic/rev3_drop -km remmelt
+	qmk compile -kb preonic/rev3_drop -km remmelt
+
+preonic-flash: preonic-build
+	qmk flash -kb preonic/rev3_drop -km remmelt
+
 %:
 	+$(MAKE) -C $(QMK_FIRMWARE_ROOT) $(MAKECMDGOALS) QMK_USERSPACE=$(QMK_USERSPACE)

@@ -1,5 +1,16 @@
 # Workflow
 
+## Remmelt's notes
+`qmk userspace-compile`
+
+or
+
+```bash
+qmk lint -kb preonic/rev3_drop -km remmelt
+qmk compile -kb preonic/rev3_drop -km remmelt
+qmk flash -kb preonic/rev3_drop -km remmelt
+```
+
 ## Tokyo60
 - Go to https://config.qmk.fm/#/tokyo60/LAYOUT_60_hhkb
 - Upload latest json file
@@ -13,5 +24,5 @@ open keyboards/kingly_keys/romac/keymaps/remmelt/keymap.c and edit there
 make kingly_keys/romac:remmelt:dfu
 
 ## Preonic
-open keyboards/preonic/keymaps/remmelt/keymap.c and edit there
-make preonic/rev3:remmelt:flash
+open keyboards/preonic/rev3_drop/keymaps/remmelt/keymap.c and edit there
+make preonic/rev3_drop:remmelt:flash
