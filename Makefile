@@ -12,6 +12,10 @@ ifeq ($(QMK_FIRMWARE_ROOT),)
     $(error Cannot determine qmk_firmware location. `qmk config -ro user.qmk_home` is not set)
 endif
 
+update:
+	git pull --rebase --autostash upstream main
+	cd $(QMK_FIRMWARE_ROOT) && git pull --rebase origin master
+
 preonic-build:
 	qmk lint -kb preonic/rev3_drop -km remmelt
 	qmk compile -kb preonic/rev3_drop -km remmelt
